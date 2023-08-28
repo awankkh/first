@@ -4,6 +4,8 @@ import { View, ScrollView, Text, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native'; // Import useNavigation
 import { styles } from './styles';
 import { UNITS } from '../data/units';
+import Sound from 'react-native-sound';
+
 
 export function UnitScreen({ route }) {
   const { unitId } = route.params;
@@ -27,17 +29,21 @@ export function UnitScreen({ route }) {
     setSelectedOption(null);
     setFeedbackMessage(null);
     setCurrentIndex(prevIndex => prevIndex + 1);
+    correctSound.play();
   };
 
   const handleFinishPress = () => {
     navigation.navigate('Home'); // Navigate to home screen
   };
-
+  const correctSound = new Sound('./sounds/correct.mp3', Sound.MAIN_BUNDLE, (error) => {
+    if (error) {
+      console.log('Error loading sound:', error);
+    }
+  });
   return (
     <View style={styles.container}>
       <View style={styles.topBox}>
       </View>
-      <ScrollView style={styles.scrollView}>
         <View style={styles.contentContainer}>
           {unit.content.map((item, index) => (
             <View key={index} style={[styles.unitBox, currentIndex === index ? null : styles.hidden]}>
@@ -92,7 +98,6 @@ export function UnitScreen({ route }) {
             </TouchableOpacity>
           )}
         </View>
-      </ScrollView>
     </View>
   );
 }

@@ -2,21 +2,12 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-  container: {
-    flexGrow: 1,
-    backgroundColor: '#F8F3E2',
-    padding: 0,
-  },
   
- 
   unitBoxesContainer: {
     flex: 1, // Take up the remaining space
     marginTop: '20%', // Adjust this value as needed
   },
-  scrollView: {
-    marginTop: '0%', // Adjust this to create space for the top box
-    marginBottom: '25%',
-  },
+  
 
  
   chapterRow: {

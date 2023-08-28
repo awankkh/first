@@ -11,10 +11,6 @@ export const styles = StyleSheet.create({
         height: '10%', // Set the height to cover 20% of the screen
         justifyContent: 'center',
         alignItems: 'center',
-      },
-      scrollView: {
-        marginTop: '0%', // Adjust this to create space for the top box
-        marginBottom: '25%',
       }, 
     contentContainer: {
         paddingBottom: 20, // Add padding at the bottom to ensure space for the last item
