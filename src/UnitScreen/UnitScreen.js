@@ -4,7 +4,7 @@ import { View, ScrollView, Text, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native'; // Import useNavigation
 import { styles } from './styles';
 import { UNITS } from '../data/units';
-import Sound from 'react-native-sound';
+import TrackPlayer from 'react-native-track-player';
 
 
 export function UnitScreen({ route }) {
