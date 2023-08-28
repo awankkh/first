@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, ImageBackground, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
-import { UNITS } from '../units';
-import { subcategories } from '../constants';
+import { UNITS } from '../data/units';
+import { subcategories } from '../data/constants';
 
 export function HomeScreen({ navigation }) {
   const [selectedSubcategory, setSelectedSubcategory] = useState(subcategories[0]);

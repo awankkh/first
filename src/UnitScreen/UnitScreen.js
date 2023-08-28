@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { View, ScrollView, Text, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native'; // Import useNavigation
 import { styles } from './styles';
-import { UNITS } from './units';
+import { UNITS } from '../data/units';
 
 export function UnitScreen({ route }) {
   const { unitId } = route.params;

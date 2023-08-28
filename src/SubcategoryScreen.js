@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { View, ScrollView, Text, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { styles } from './styles';
-import { UNITS } from './units';
-import { subcategories } from './constants';
+import { UNITS } from './data/units';
+import { subcategories } from './data/constants';
 
 export function SubcategoryScreen({ route }) {
   const { subcategory } = route.params;
