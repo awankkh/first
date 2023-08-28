@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, ImageBackground, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
-import { UNITS } from './units';
-import { subcategories } from './constants';
+import { UNITS } from '../units';
+import { subcategories } from '../constants';
 
 export function HomeScreen({ navigation }) {
   const [selectedSubcategory, setSelectedSubcategory] = useState(subcategories[0]);
@@ -35,7 +35,7 @@ export function HomeScreen({ navigation }) {
     <View style={styles.container}>
       <View style={styles.titleBox}>
         <ImageBackground
-          source={require('./images/1.png')}
+          source={require('../images/1.png')}
           style={styles.titleImage}
         />
         <Text style={styles.titleText}>خوش آمدید</Text>
