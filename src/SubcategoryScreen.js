@@ -1,3 +1,4 @@
+//subcategoryscreen.js
 import React, { useState } from 'react';
 import { View, ScrollView, Text, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';

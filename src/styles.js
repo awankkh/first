@@ -1,3 +1,4 @@
+//styles.js
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
@@ -215,7 +216,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
   },
- 
+
   unitCategoriesContainer: {
     flexDirection: 'row', // Arrange boxes in a row
     justifyContent: 'space-between', // Add space between boxes

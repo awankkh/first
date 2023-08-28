@@ -1,10 +1,11 @@
+//App.js
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { HomeScreen } from './HomeScreen';
-import { UnitScreen } from './UnitScreen';
-import { SubcategoryScreen } from './SubcategoryScreen'; // Import the new SubcategoryScreen
-import { subcategories } from './constants'; // Import the subcategories
+import { HomeScreen } from './src/HomeScreen';
+import { UnitScreen } from './src/UnitScreenreen';
+import { SubcategoryScreen } from './src/SubcategoryScreen'; // Import the new SubcategoryScreen
+import { subcategories } from './src/constants'; // Import the subcategories
 
 const Stack = createStackNavigator();
 
