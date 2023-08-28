@@ -1,16 +1,20 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
     container: {
-        flexGrow: 1,
-        backgroundColor: '#F8F3E2',
+        flexGrow:1,
+        backgroundColor: '#29292E',
         padding: 0,
+        borderRadius: 12,
+
       },
     topBox: {
-        backgroundColor: '#3763FF',
+        backgroundColor: '#3550DC',
         height: '10%', // Set the height to cover 20% of the screen
         justifyContent: 'center',
         alignItems: 'center',
+        borderRadius: 10,
+
       }, 
     contentContainer: {
         paddingBottom: 20, // Add padding at the bottom to ensure space for the last item
@@ -19,7 +23,7 @@ export const styles = StyleSheet.create({
         padding: 90,
         margin: 10,
         marginTop: 50,
-        backgroundColor: 'white',
+        backgroundColor: '#FFFFFF',
         justifyContent: 'center', // Center both vertically and horizontally
         alignItems: 'center',
         borderRadius: 10,
@@ -82,12 +86,18 @@ export const styles = StyleSheet.create({
         color: 'red', // Customize the color for wrong feedback
       },
     finishButton: {
-        margin: 5,
-        backgroundColor: '#3763FF',
-        borderRadius: 8,
-        padding: 10,
-        alignItems: 'center',
-        marginTop: 20,
+      margin: 5,
+      minHeight: 56,
+      maxHeight: 56,
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#00875F',
+      borderRadius: 6,
+      padding: 10,
+      alignItems: 'center',
+      marginTop: 20,
+      marginRight: 16,
+      marginLeft: 16,
       },
     finishButtonText: {
         color: 'white',
@@ -96,11 +106,18 @@ export const styles = StyleSheet.create({
       },
     nextButton: {
         margin: 5,
-        backgroundColor: '#3763FF',
-        borderRadius: 8,
+        minHeight: 56,
+        maxHeight: 56,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#00875F',
+        borderRadius: 6,
         padding: 10,
         alignItems: 'center',
         marginTop: 20,
+        marginRight: 16,
+        marginLeft: 16,
+
         },
     nextButtonText: {
         color: 'white',
@@ -127,5 +144,10 @@ export const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
         color: 'pink',
+    },
+    remainingText: {
+      color: 'white',
+      fontSize: 16,
+      marginTop: 5,
     },
     })

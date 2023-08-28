@@ -1,11 +1,10 @@
 //unitscreen.js
 import React, { useState } from 'react';
 import { View, ScrollView, Text, Image, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native'; // Import useNavigation
+import { useNavigation } from '@react-navigation/native'; 
 import { styles } from './styles';
 import { UNITS } from '../data/units';
-import TrackPlayer from 'react-native-track-player';
-
+import { ProgressBar } from '../ProgressBar/ProgressBar'; 
 
 export function UnitScreen({ route }) {
   const { unitId } = route.params;
@@ -13,7 +12,7 @@ export function UnitScreen({ route }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [feedbackMessage, setFeedbackMessage] = useState(null);
-  const navigation = useNavigation(); // Get navigation object
+  const navigation = useNavigation();
 
   const handleOptionPress = (optionIndex, index) => {
     setSelectedOption(optionIndex);
@@ -29,21 +28,20 @@ export function UnitScreen({ route }) {
     setSelectedOption(null);
     setFeedbackMessage(null);
     setCurrentIndex(prevIndex => prevIndex + 1);
-    correctSound.play();
   };
 
   const handleFinishPress = () => {
     navigation.navigate('Home'); // Navigate to home screen
   };
-  const correctSound = new Sound('./sounds/correct.mp3', Sound.MAIN_BUNDLE, (error) => {
-    if (error) {
-      console.log('Error loading sound:', error);
-    }
-  });
+
   return (
     <View style={styles.container}>
       <View style={styles.topBox}>
       </View>
+      <ProgressBar total={unit.content.length} current={currentIndex + 1} />
+       <Text style={styles.remainingText}>
+        {currentIndex + 1} / {unit.content.length} Units Remaining
+        </Text>
         <View style={styles.contentContainer}>
           {unit.content.map((item, index) => (
             <View key={index} style={[styles.unitBox, currentIndex === index ? null : styles.hidden]}>
