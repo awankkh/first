@@ -5,7 +5,7 @@ import { Button } from '../Button/button';
 import Stars from '../stars/stars';
 import { styles } from './styles';
 
-export function FinishScreen () {
+export function FinishScreen() {
   const route = useRoute();
 
   const navigation = useNavigation();
@@ -22,5 +22,5 @@ export function FinishScreen () {
       <Button title="دوبارہ سے شروع کریں" onPress={() => navigation.navigate('Home')} />
     </View>
   );
-};
+}
 
