@@ -1,7 +1,7 @@
 import React from 'react';
 import Animated, { Easing, useLoop, BounceIn } from 'react-native-reanimated';
 import { Canvas, LinearGradient, Path } from '@shopify/react-native-skia';
-import TrophySvg from './assets/trophy.svg';
+import TrophySvg from '../../assets/trophy.svg';
 import './styles'; 
 
 function Stars() {

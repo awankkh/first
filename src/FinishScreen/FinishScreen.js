@@ -5,11 +5,11 @@ import { Button } from '../Button/button';
 import Stars from '../stars/stars';
 import { styles } from './styles';
 
-const Finish = () => {
+const FinishScreen = () => {
   const route = useRoute();
   const { points, total } = route.params;
 
-  const { navigate } = useNavigation();
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -22,9 +22,9 @@ const Finish = () => {
         </Text>
       </View>
 
-      <Button title="دوبارہ سے شروع کریں" onPress={() => navigate('home')} />
+      <Button title="دوبارہ سے شروع کریں" onPress={() => navigation.navigate('Home')} />
     </View>
   );
 };
 
-export default Finish;
+export default FinishScreen;
