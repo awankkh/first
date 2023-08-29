@@ -3,18 +3,28 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
  container: {
       flexGrow: 1,
-      backgroundColor: '#F8F3E2',
-      padding: 0,
+      backgroundColor: '#F8F8F8',
+      padding:0,
       },
  subcategoryContentContainer: {
-    marginTop: 20,
+    marginTop: 10,
     paddingHorizontal: 10,
   },
+  homeBoxRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 10,
+  },
+  unitTitle: {
+    fontSize: 16,
+    textAlign: 'center', // Center the text within the box
+  },
   homeBox: {
+    flex: 1,
     padding: 20,
     margin: 10,
     marginTop: 10,
-    backgroundColor: 'white',
+    backgroundColor: '#FFFFFF',
     justifyContent: 'center', // Center both vertically and horizontally
     alignItems: 'left',
     borderRadius: 10,
@@ -25,10 +35,17 @@ export const styles = StyleSheet.create({
     elevation: 5,
   },
   titleBox: {
-    backgroundColor: '#3763FF',
+    marginTop: 70,
+    margin: 10,
+    borderRadius: 10,
+    backgroundColor: '#236FE2',
     height: '20%', // Set the height to cover 15% of the screen
     justifyContent: 'space-between',
     alignItems: 'center',
+    shadowColor: 'rgba(0, 0, 0, 0.2)',
+    shadowOffset: { width: 10, height: 2 },
+
+
   },
   titleText: {
     fontSize: 40,
@@ -45,17 +62,17 @@ export const styles = StyleSheet.create({
     top: 20,
   },
   selectedSubcategoryBox: {
-    backgroundColor: '#3763FF',
+    backgroundColor: '#236FE2',
   },
   subcategoryText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: 'black',
+    color: 'black',  
   },
   
   subcategoryLine: {
     borderBottomWidth: 2,
-    borderColor: '#007AFF',
+    borderColor: '#236FE2',
     alignSelf: 'center',
     width: '80%',
     marginTop: 5,
@@ -70,7 +87,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 8,
     borderWidth: 1,
-    borderColor: '#3763FF',
+    borderColor: '#236FE2',
     borderRadius: 20,
     marginRight: 10,
   },
@@ -87,5 +104,13 @@ export const styles = StyleSheet.create({
     right: 60,
     bottom: 0,
   },
- 
+  backgroundTopBox: {
+    position: 'absolute',
+    backgroundColor: '#319FDD', // Set the desired color
+    height: '20%', // Set the height to 20% of the screen height
+    width: '100%', // Cover the entire width
+    top: 0, // Align to the top
+    zIndex: -1, // Place it behind other content
+  },
+  
 })

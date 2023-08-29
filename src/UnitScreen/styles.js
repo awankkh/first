@@ -3,7 +3,7 @@ import { Dimensions, StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
         flexGrow:1,
-        backgroundColor: '#3550DC',
+        backgroundColor: '#F8F8F8',
         padding: 0,
         borderRadius: 12,
 

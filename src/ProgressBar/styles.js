@@ -5,12 +5,12 @@ export const styles = StyleSheet.create({
     height: 8,
     width: '100%',
     borderRadius: 8,
-    backgroundColor: '#505059',
+    backgroundColor: '#FFFFFF',
     marginBottom: 10, // Add margin to separate the progress bar from other content
   },
   progress: {
     height: 8,
-    backgroundColor: 'white', // Use your theme color or any other color you prefer
+    backgroundColor: '#00875F', // Use your theme color or any other color you prefer
     borderRadius: 8,
   },
 });

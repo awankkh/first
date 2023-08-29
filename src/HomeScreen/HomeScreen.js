@@ -1,4 +1,3 @@
-// HomeScreen.js
 import React, { useState } from 'react';
 import { View, Text, ScrollView, ImageBackground, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
@@ -14,25 +13,32 @@ export function HomeScreen({ navigation }) {
 
   const renderSubcategoryContent = () => {
     const selectedUnits = UNITS.filter((unit) => unit.subcategory === selectedSubcategory);
+    const rows = [];
 
-    return (
-      <ScrollView style={styles.subcategoryContentContainer}>
-        {selectedUnits.map((unit) => (
-          <TouchableOpacity
-            key={unit.id}
-            style={styles.homeBox}
-            onPress={() => navigateToUnit(unit.id)}
-          >
-            {/* Render your unit content here */}
-            <Text style={styles.unitTitle}>{unit.title}</Text>
-          </TouchableOpacity>
-        ))}
-      </ScrollView>
-    );
+    for (let i = 0; i < selectedUnits.length; i += 3) {
+      const rowUnits = selectedUnits.slice(i, i + 3);
+      const row = (
+        <View style={styles.homeBoxRow} key={i}>
+          {rowUnits.map((unit) => (
+            <TouchableOpacity
+              key={unit.id}
+              style={styles.homeBox}
+              onPress={() => navigateToUnit(unit.id)}
+            >
+              <Text style={styles.unitTitle}>{unit.title}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+      );
+      rows.push(row);
+    }
+
+    return <View style={styles.subcategoryContentContainer}>{rows}</View>;
   };
 
   return (
     <View style={styles.container}>
+      <View style={styles.backgroundTopBox} />
       <View style={styles.titleBox}>
         <ImageBackground
           source={require('../images/1.png')}

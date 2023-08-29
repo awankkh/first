@@ -4,6 +4,7 @@ export const UNITS = [
     id: '1',
     subcategory: 'Human Body',
     title: 'انسانی جسم',
+    image: require('./images/HumanBody/1.png'), // Add the image source here
     content: [
       {
         type: 'image',
@@ -83,7 +84,7 @@ export const UNITS = [
   },
   {
     id: '2',
-    subcategory: 'Earth',
+    subcategory: 'Human Body',
     title: 'Unit 2: Concepts',
     content: [
       {
@@ -107,7 +108,7 @@ export const UNITS = [
   },
   {
     id: '4',
-    subcategory: 'Popular',
+    subcategory: 'Human Body',
     title: 'Unit 4: Concepts',
     content: [
       {
@@ -118,6 +119,7 @@ export const UNITS = [
   },
   {
     id: '5',
+    subcategory: 'Human Body',
     title: 'Unit 5: Quiz',
     content: [
       {
@@ -130,6 +132,7 @@ export const UNITS = [
   },
   {
     id: '6',
+    subcategory: 'Human Body',
     title: 'Unit 6: Quiz',
     content: [
       {
