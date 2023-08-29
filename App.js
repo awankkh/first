@@ -3,7 +3,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreen } from './src/HomeScreen/HomeScreen';
 import { UnitScreen } from './src/UnitScreen/UnitScreen';
-import FinishScreen from './src/FinishScreen/FinishScreen'; 
 
 const Stack = createStackNavigator();
 
@@ -13,7 +12,6 @@ export default function App() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Unit" component={UnitScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Finish" component={FinishScreen} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
