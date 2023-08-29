@@ -4,7 +4,7 @@ import { Canvas, LinearGradient, Path } from '@shopify/react-native-skia';
 import TrophySvg from '../../assets/trophy.svg';
 import './styles'; 
 
-function Stars() {
+export function Stars() {
   const backStarsBlinkAnimated = useLoop({
     duration: 2000,
     easing: Easing.ease,
@@ -131,5 +131,3 @@ function Stars() {
     </View>
   );
 }
-
-export default Stars;

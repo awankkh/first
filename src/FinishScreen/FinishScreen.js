@@ -5,9 +5,8 @@ import { Button } from '../Button/button';
 import Stars from '../stars/stars';
 import { styles } from './styles';
 
-const FinishScreen = () => {
+export function FinishScreen () {
   const route = useRoute();
-  const { points, total } = route.params;
 
   const navigation = useNavigation();
 
@@ -17,9 +16,7 @@ const FinishScreen = () => {
 
       <View style={styles.message}>
         <Text style={styles.title}>مبارک ہو</Text>
-        <Text style={styles.subtitle}>
-          آپ کے {total} میں سے {points} سوال ٹھیک ہوئے ہیں
-        </Text>
+        
       </View>
 
       <Button title="دوبارہ سے شروع کریں" onPress={() => navigation.navigate('Home')} />
@@ -27,4 +24,3 @@ const FinishScreen = () => {
   );
 };
 
-export default FinishScreen;

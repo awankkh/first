@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreen } from './src/HomeScreen/HomeScreen';
 import { UnitScreen } from './src/UnitScreen/UnitScreen';
-import FinishScreen from './src/FinishScreen/FinishScreen'; // Make sure the import statement is like this
+import FinishScreen from './src/FinishScreen/FinishScreen'; 
 
 const Stack = createStackNavigator();
 

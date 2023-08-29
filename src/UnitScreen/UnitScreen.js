@@ -31,7 +31,7 @@ export function UnitScreen({ route }) {
   };
 
   const handleFinishPress = () => {
-    navigation.navigate('Home'); // Navigate to home screen
+    navigation.navigate('Finish'); // Navigate to home screen
   };
 
   return (
